@@ -42,8 +42,10 @@ img {
 }
 
 .leftSection {
+    /* position: absolute; */
+    top: 0;
     width: 20%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -119,6 +121,7 @@ img {
 .header {
     width: 70%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -174,10 +177,13 @@ nav ul li:hover {
     /* border: 2px solid black; */
     width: 50%;
     display: flex;
+    flex-wrap: wrap;
     /* justify-content: space-between; */
     /* justify-content: space-evenly; */
     align-items: center;
     color: #494949;
+    margin-top: 5em;
+    margin-bottom: 1em;
 }
 
 .welcome-img {
@@ -195,19 +201,22 @@ nav ul li:hover {
 .main-stats {
     width: 90%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 1.5em;
+    margin-bottom: 3.5em;
 }
 
 .card {
     /* transform: translateY(-25%); */
-    position: relative;
-    top: -2em;
+    /* position: relative;
+    top: -2em; */
     width: 23%;
     color: #ffff;
     background: #FCAF5C;
     border-radius: 8px;
-    height: 18vh;
+    height: 15vh;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -224,7 +233,7 @@ nav ul li:hover {
     display: flex;
     justify-content: space-evenly;
     font-size: 2rem;
-    margin-top: .7em;
+    margin-top: .3em;
 }
 
 .stats-img {
@@ -233,4 +242,124 @@ nav ul li:hover {
 
 .stats .amount {
     font-size: 1.6rem;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+}
+
+.Income,
+.Departments {
+    background: #a8a8a8;
+    min-height: 35vh;
+    border-radius: 8px;
+    color: #ffff;
+}
+
+.Income {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2em;
+}
+
+.Income h3 {
+    margin-top: 1.3em;
+}
+
+.progress {
+    width: 80%;
+}
+
+.progress p {
+    text-align: left;
+    margin-top: 1.5em;
+    margin-bottom: .7em;
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+    height: 3vh;
+    border-radius: 10px;
+    box-shadow: -4px -4px 7px #ffffff54, 4px 4px 7px rgba(0, 0, 0, 0.281);
+}
+
+.innerBar {
+    /* border: 2px solid red; */
+    height: 2vh;
+    width: 98%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: inset -4px -4px 7px #ffffff54, inset 4px 4px 7px rgba(0, 0, 0, 0.281);
+}
+
+.amountBar {
+    /* animation: load 3s normal forwards; */
+    /* border: 2px solid red; */
+    height: 2vh;
+    /* margin: auto; */
+    border-radius: 10px;
+    box-shadow: inset -4px -4px 7px #ffffff54, inset 4px 4px 7px rgba(0, 0, 0, 0.281);
+}
+
+.cont {
+    animation: load 2.7s normal forwards;
+    background-color: #5CF236;
+    width: 85%;
+}
+
+.loan {
+    animation: load 1.5s normal forwards;
+    background-color: #FF9A7D;
+    width: 60%;
+}
+
+.fee {
+    animation: load 2s normal forwards;
+    background-color: #F8AE5E;
+    width: 70%;
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+    }
+}
+
+.Departments {
+    width: 40%;
+}
+
+.Departments h3 {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.Departments div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.dep-card {
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    min-height: 12vh;
+    background: #FF9A7D;
+    margin-bottom: 2em;
+    border-radius: 10px;
 }
