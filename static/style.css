@@ -120,6 +120,7 @@ img {
 
 .header {
     width: 70%;
+    background-color: #D7D7D7;
     display: flex;
     flex-wrap: wrap;
     /* min-width: 300px; */
@@ -384,10 +385,19 @@ nav ul li:hover {
 
 .dep-card:hover {
     width: 35%;
-    background: #6bcc53;
+    background: #5cb147;
 }
 
-.showMenuOnClick {}
+.close {
+    display: none;
+    position: absolute;
+    text-align: right;
+    top: 1em;
+    font-size: 1.6rem;
+    color: #686868;
+    /* border: 2px solid black; */
+    width: 85%;
+}
 
 .hideDesktop {
     display: none;
@@ -398,11 +408,22 @@ nav ul li:hover {
         display: block;
     }
     .leftSection {
-        display: none;
-        position: absolute;
+        /* display: none; */
+        position: fixed;
+        top: 0;
         width: 40%;
         background-color: #86d67c;
         z-index: 10;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .4s ease-in;
+    }
+    .showMenuOnClick {
+        visibility: visible;
+        opacity: 1;
+    }
+    .close {
+        display: block;
     }
     nav {
         width: 50%;
@@ -439,13 +460,17 @@ nav ul li:hover {
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
     }
+    .leftSection {
+        width: 100%;
+        height: 100vh;
+    }
     .welcome {
         margin-top: 2em;
         width: 80%;
         /* border: 2px solid black; */
     }
     .message {
-        margin-left: .5em;
+        /* margin-left: .5em; */
     }
     .main-stats {
         flex-direction: column;
@@ -474,7 +499,7 @@ nav ul li:hover {
     }
 }
 
-@media (max-width:370px) {
+@media (max-width:380px) {
     .card {
         height: 20vh;
     }
