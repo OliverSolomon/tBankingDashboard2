@@ -43,9 +43,9 @@ img {
 
 .leftSection {
     /* position: absolute; */
-    top: 0;
+    /* top: 0; */
     width: 20%;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -109,7 +109,7 @@ img {
 }
 
 .rightSection {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -171,6 +171,12 @@ nav ul li:nth-child(3) {
     border-left: 2px solid rgba(119, 119, 119, 0.644);
 }
 
+nav ul li:nth-child(4) {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: 2px solid rgba(119, 119, 119, 0.644);
+}
+
 nav ul li:hover {
     background: #fcaf5cd5;
 }
@@ -221,6 +227,12 @@ nav ul li:hover {
     border-radius: 8px;
     height: 15vh;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all .35s ease-in-out;
+}
+
+.card:hover {
+    width: 20%;
+    background: #80ec64;
 }
 
 .caption {
@@ -262,6 +274,7 @@ nav ul li:hover {
     min-height: 35vh;
     border-radius: 8px;
     color: #ffff;
+    text-align: center;
 }
 
 .Income {
@@ -365,4 +378,104 @@ nav ul li:hover {
     background: #FF9A7D;
     margin-bottom: 2em;
     border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all .3s ease-in-out;
+}
+
+.dep-card:hover {
+    width: 35%;
+    background: #80ec64;
+}
+
+.showMenuOnClick {}
+
+.hideDesktop {
+    display: none;
+}
+
+@media (max-width:768px) {
+    .hideDesktop {
+        display: block;
+    }
+    .leftSection {
+        display: none;
+        position: absolute;
+        width: 40%;
+        background-color: #86d67c;
+        z-index: 10;
+    }
+    nav {
+        width: 50%;
+    }
+    .welcome {
+        flex-direction: column;
+    }
+    .card {
+        width: 28%;
+        margin: 1em;
+    }
+    .card:hover {
+        width: 25%;
+    }
+}
+
+@media (max-width:500px) {
+    .header {
+        flex-direction: column;
+        top: 0;
+        background-color: #D7D7D7;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 2em;
+    }
+    nav,
+    .activePage {
+        width: 80%;
+    }
+    nav {
+        margin-top: 1em;
+    }
+    nav ul li:nth-child(3) {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .welcome {
+        margin-top: 2em;
+        width: 80%;
+        /* border: 2px solid black; */
+    }
+    .message {
+        margin-left: .5em;
+    }
+    .main-stats {
+        flex-direction: column;
+    }
+    .card {
+        width: 80%;
+        margin: 1em;
+    }
+    .card:hover {
+        width: 70%;
+    }
+    .bottom-section {
+        flex-direction: column;
+        /* border: 2px solid black; */
+        width: 96%;
+    }
+    .Income {
+        width: 90%;
+        margin-bottom: 2em;
+    }
+    .Departments {
+        width: 90%;
+    }
+    .dep-card p {
+        margin: .5em;
+    }
+}
+
+@media (max-width:370px) {
+    .card {
+        height: 20vh;
+    }
 }
