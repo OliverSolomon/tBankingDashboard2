@@ -232,7 +232,7 @@ nav ul li:hover {
 
 .card:hover {
     width: 20%;
-    background: #80ec64;
+    background: #6bcc53;
 }
 
 .caption {
@@ -384,7 +384,7 @@ nav ul li:hover {
 
 .dep-card:hover {
     width: 35%;
-    background: #80ec64;
+    background: #6bcc53;
 }
 
 .showMenuOnClick {}
