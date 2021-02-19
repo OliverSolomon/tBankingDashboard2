@@ -133,6 +133,10 @@ input[type="submit"]:hover {
     background: #FF9A7D;
 }
 
+.choices ul li a {
+    width: 100%;
+}
+
 @media (max-width:768px) {
     .choices {
         width: 75%;

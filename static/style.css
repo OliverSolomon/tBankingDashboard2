@@ -53,6 +53,7 @@ img {
     font-size: 1.1em;
     background-color: #8aff7ba3;
     box-shadow: -7px -7px 7px rgba(255, 255, 255, 0.25), 10px 10px 13px rgba(0, 0, 0, 0.25);
+    animation: transitionInLeft ease-in-out 3.5s;
 }
 
 .user {
@@ -285,6 +286,7 @@ nav ul li:hover {
     align-items: center;
     flex-direction: column;
     padding-bottom: 2em;
+    animation: transitionInDown ease-in-out 2.5s;
 }
 
 .Income h3 {
@@ -293,6 +295,7 @@ nav ul li:hover {
 
 .progress {
     width: 80%;
+    /* animation: transitionIn ease-in-out 1.7s; */
 }
 
 .progress p {
@@ -330,19 +333,19 @@ nav ul li:hover {
 }
 
 .cont {
-    animation: load 2.7s normal forwards;
+    animation: load 10.7s normal forwards;
     background-color: #5CF236;
     width: 85%;
 }
 
 .loan {
-    animation: load 1.5s normal forwards;
+    animation: load 18.5s normal forwards;
     background-color: #FF9A7D;
     width: 60%;
 }
 
 .fee {
-    animation: load 2s normal forwards;
+    animation: load 10s normal forwards;
     background-color: #F8AE5E;
     width: 70%;
 }
@@ -355,6 +358,7 @@ nav ul li:hover {
 
 .Departments {
     width: 40%;
+    animation: transitionInDown ease-in-out 3s;
 }
 
 .Departments h3 {
@@ -467,10 +471,12 @@ nav ul li:hover {
     .welcome {
         margin-top: 2em;
         width: 80%;
+        animation: transitionInUp ease-in-out 3.5s;
         /* border: 2px solid black; */
     }
     .message {
         /* margin-left: .5em; */
+        animation: transitionInUp ease-in-out 4s;
     }
     .main-stats {
         flex-direction: column;
@@ -478,6 +484,7 @@ nav ul li:hover {
     .card {
         width: 80%;
         margin: 1em;
+        animation: transitionInLeft ease-in-out 4.5s;
     }
     .card:hover {
         width: 70%;
@@ -502,5 +509,52 @@ nav ul li:hover {
 @media (max-width:380px) {
     .card {
         height: 20vh;
+    }
+}
+
+
+/* +++++++++++++++++++================= transitions */
+
+@keyframes transitionInLeft {
+    from {
+        /* opacity: 0; */
+        transform: translateX(-400px);
+    }
+    to {
+        /* opacity: 1; */
+        transform: translateX(0);
+    }
+}
+
+@keyframes transitionInRight {
+    from {
+        /* opacity: 0; */
+        transform: translateX(400px);
+    }
+    to {
+        /* opacity: 1; */
+        transform: translateX(0);
+    }
+}
+
+@keyframes transitionInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-10vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes transitionInDown {
+    from {
+        /* opacity: 0; */
+        transform: translateY(120vh);
+    }
+    to {
+        /* opacity: 1; */
+        transform: translateY(0);
     }
 }
