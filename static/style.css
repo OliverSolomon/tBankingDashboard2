@@ -471,12 +471,12 @@ nav ul li:hover {
     .welcome {
         margin-top: 2em;
         width: 80%;
-        animation: transitionInUp ease-in-out 3.5s;
+        animation: transitionInUp ease-in-out 1.5s;
         /* border: 2px solid black; */
     }
     .message {
         /* margin-left: .5em; */
-        animation: transitionInUp ease-in-out 4s;
+        animation: transitionInUp ease-in-out 2s;
     }
     .main-stats {
         flex-direction: column;
@@ -484,7 +484,7 @@ nav ul li:hover {
     .card {
         width: 80%;
         margin: 1em;
-        animation: transitionInLeft ease-in-out 4.5s;
+        animation: transitionInLeft ease-in-out 3.5s;
     }
     .card:hover {
         width: 70%;
